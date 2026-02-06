@@ -1,0 +1,48 @@
+[8373/8456] CXX obj/QtWebEngineCore/web_engine_page_render_frame.o
+In file included from ../../../../../../qtwebengine/src/3rdparty/chromium/third_party/blink/renderer/core/dom/element.h:40,
+                 from ../../../../../../qtwebengine/src/3rdparty/chromium/third_party/blink/renderer/core/dom/document.h:73,
+                 from ../../../../../../qtwebengine/src/3rdparty/chromium/third_party/blink/renderer/core/loader/frame_loader.h:51,
+                 from ../../../../../../qtwebengine/src/3rdparty/chromium/third_party/blink/renderer/core/frame/local_frame.h:83,
+                 from ../../../../../../qtwebengine/src/3rdparty/chromium/third_party/blink/renderer/core/frame/web_local_frame_impl.h:73,
+                 from /home/m83/chulho/qt/6.9.1/source/qt-everywhere-src-6.9.1/qtwebengine/src/core/renderer/web_engine_page_render_frame.cpp:13:
+../../../../../../qtwebengine/src/3rdparty/chromium/third_party/blink/renderer/core/css/resolver/cascade_filter.h: In constructor ‘blink::CascadeFilter::CascadeFilter(blink::CSSProperty::Flag, bool)’:
+../../../../../../qtwebengine/src/3rdparty/chromium/third_party/blink/renderer/core/css/resolver/cascade_filter.h:38:31: warning: enumerated and non-enumerated type in conditional expression [-Wextra]
+   38 |       : mask_(flag), flags_(v ? flag : 0) {}
+      |                             ~~^~~~~~~~~~
+../../../../../../qtwebengine/src/3rdparty/chromium/third_party/blink/renderer/core/css/resolver/cascade_filter.h: In member function ‘bool blink::CascadeFilter::Rejects(blink::CSSProperty::Flag, bool) const’:
+../../../../../../qtwebengine/src/3rdparty/chromium/third_party/blink/renderer/core/css/resolver/cascade_filter.h:85:17: warning: enumerated and non-enumerated type in conditional expression [-Wextra]
+   85 |     return ~((v ? flag : 0) ^ flags_) & (mask_ & flag);
+      |               ~~^~~~~~~~~~
+[8418/8456] CXX obj/ABS_PATH/home/m83/chulho/qt/6.9.1/source/qt-everywhere-src-6.9.1/qtwebengine/src/core/ozone/qt/ozone_platform_qt.o
+FAILED: obj/ABS_PATH/home/m83/chulho/qt/6.9.1/source/qt-everywhere-src-6.9.1/qtwebengine/src/core/ozone/qt/ozone_platform_qt.o
+/core/Linux/APPZ/packages/gcc/11.5.0/platform_linux/bin/c++ -MD -MF obj/ABS_PATH/home/m83/chulho/qt/6.9.1/source/qt-everywhere-src-6.9.1/qtwebengine/src/core/ozone/qt/ozone_platform_qt.o.d -DOZONE_IMPLEMENTATION -DUSE_UDEV -DUSE_AURA=1 -DUSE_OZONE=1 -DOFFICIAL_BUILD -DTOOLKIT_QT -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DNO_UNWIND_TABLES -D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_NONE -D_GLIBCXX_ASSERTIONS=1 -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DSK_ENABLE_SKSL -DSK_UNTIL_CRBUG_1187654_IS_FIXED -DSK_USER_CONFIG_HEADER=\"../../skia/config/SkUserConfig.h\" -DSK_WIN_FONTMGR_NO_SIMULATIONS -DSK_DISABLE_LEGACY_INIT_DECODERS -DSK_DISABLE_LEGACY_BACKEND_TEXTURE_FUNCS -DSK_DISABLE_LEGACY_TEXTURE_INFO_FUNCS -DSK_DISABLE_LEGACY_BACKEND_SEMAPHORE_FUNCS -DSK_DISABLE_LEGACY_GRAPHITE_IMAGES -DSK_DISABLE_LEGACY_DAWN_TEXTURE_INFO_FUNCS -DSK_DISABLE_LEGACY_DAWN_BACKEND_TEXTURE_FUNCS -DSK_CODEC_DECODES_JPEG -DSK_ENCODE_JPEG -DSK_ENCODE_PNG -DSK_ENCODE_WEBP -DSK_GANESH -DSK_GPU_WORKAROUNDS_HEADER=\"gpu/config/gpu_driver_bug_workaround_autogen.h\" -DSK_GL -DSK_VULKAN=1 -DSK_GRAPHITE -DVK_USE_PLATFORM_XCB_KHR -DU_USING_ICU_NAMESPACE=0 -DU_ENABLE_DYLOAD=0 -DUSE_CHROMIUM_ICU=1 -DU_ENABLE_TRACING=1 -DU_ENABLE_RESOURCE_TRACING=0 -DU_STATIC_IMPLEMENTATION -DICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE -DGOOGLE_PROTOBUF_NO_RTTI -DGOOGLE_PROTOBUF_NO_STATIC_INITIALIZER -DGOOGLE_PROTOBUF_INTERNAL_DONATE_STEAL_INLINE=0 -DHAVE_PTHREAD -DVK_NO_PROTOTYPES -DUSE_VULKAN_XCB -Igen -I../../../../../../qtwebengine/src/3rdparty/chromium -I../../../../../../qtwebengine/src/3rdparty/chromium/third_party/perfetto/include -Igen/third_party/perfetto/build_config -Igen/third_party/perfetto -I../../../../../../qtwebengine/src/3rdparty/chromium/net/third_party/quiche/overrides -I../../../../../../qtwebengine/src/3rdparty/chromium/net/third_party/quiche/src/quiche/common/platform/default -I../../../../../../qtwebengine/src/3rdparty/chromium/net/third_party/quiche/src -I../../../../../../qtwebengine/src/3rdparty/chromium/third_party/skia -Igen/third_party/skia -I../../../../../../qtwebengine/src/3rdparty/chromium/third_party/wuffs/src/release/c -I../../../../../../qtwebengine/src/3rdparty/chromium/third_party/vulkan/include -I../../../../../../qtwebengine/src/3rdparty/chromium/third_party/vulkan-headers/src/include -I../../../../../../qtwebengine/src/3rdparty/chromium/base/allocator/partition_allocator/src -Igen/base/allocator/partition_allocator/src -I../../../../../../qtwebengine/src/3rdparty/chromium/third_party/abseil-cpp -I../../../../../../qtwebengine/src/3rdparty/chromium/third_party/boringssl/src/include -I../../../../../../qtwebengine/src/3rdparty/chromium/third_party/protobuf/src -Igen/protoc_out -I../../../../../../qtwebengine/src/3rdparty/chromium/third_party/ipcz/include -I../../../../../../qtwebengine/src/3rdparty/chromium/third_party/ced/src -I../../../../../../qtwebengine/src/3rdparty/chromium/third_party/icu/source/common -I../../../../../../qtwebengine/src/3rdparty/chromium/third_party/icu/source/i18n -Igen/net/third_party/quiche/src -I../../../../../../qtwebengine/src/3rdparty/chromium/third_party/angle/include -I../../../../../../qtwebengine/src/3rdparty/chromium/third_party/mesa_headers -Wall -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -Wno-unused-local-typedefs -Wno-maybe-uninitialized -Wno-deprecated-declarations -fno-delete-null-pointer-checks -Wno-comments -Wno-packed-not-aligned -Wno-misleading-indentation -Wno-dangling-else -Wno-missing-field-initializers -Wno-unused-parameter -Wno-psabi -fno-ident -fno-strict-aliasing -fstack-protector -Wno-unknown-pragmas -Wno-address -Wno-parentheses -Wno-sign-compare -Wno-stringop-overflow -Wno-stringop-overread -Wno-psabi -Wno-multichar -Wno-format-zero-length -fno-unwind-tables -fno-asynchronous-unwind-tables -fPIC -pipe -pthread -m64 -msse3 -O2 -fdata-sections -ffunction-sections -fno-math-errno -fno-omit-frame-pointer -g0 -fvisibility=hidden -isystem/core/Linux/APPZ/packages/xproto/7.0.31/include -isystem/core/Linux/APPZ/packages/libxcb/1.17.0/include -isystem/usr/include/nss3 -isystem/usr/include/nspr4 -Wno-narrowing -Wno-class-memaccess -Wno-attributes -Wno-class-memaccess -Wno-subobject-linkage -Wno-invalid-offsetof -Wno-return-type -Wno-deprecated-copy -Wno-invalid-offsetof -Wno-deprecated-copy -Wno-expansion-to-defined -std=gnu++20 -fno-exceptions -fno-rtti -fvisibility-inlines-hidden -c /home/m83/chulho/qt/6.9.1/source/qt-everywhere-src-6.9.1/qtwebengine/src/core/ozone/ozone_platform_qt.cpp -o obj/ABS_PATH/home/m83/chulho/qt/6.9.1/source/qt-everywhere-src-6.9.1/qtwebengine/src/core/ozone/qt/ozone_platform_qt.o
+In file included from /usr/include/X11/XKBlib.h:31,
+                 from /home/m83/chulho/qt/6.9.1/source/qt-everywhere-src-6.9.1/qtwebengine/src/core/ozone/ozone_platform_qt.cpp:36:
+/usr/include/X11/extensions/XKBstr.h:405:38: error: expected ‘;’ at end of member declaration
+  405 |         char    name[XkbKeyNameLength]  _X_NONSTRING;
+      |                                      ^
+      |                                        ;
+/usr/include/X11/extensions/XKBstr.h:405:41: error: ‘_X_NONSTRING’ does not name a type
+  405 |         char    name[XkbKeyNameLength]  _X_NONSTRING;
+      |                                         ^~~~~~~~~~~~
+/usr/include/X11/extensions/XKBstr.h:409:38: error: expected ‘;’ at end of member declaration
+  409 |         char    real[XkbKeyNameLength]  _X_NONSTRING;
+      |                                      ^
+      |                                        ;
+/usr/include/X11/extensions/XKBstr.h:409:41: error: ‘_X_NONSTRING’ does not name a type
+  409 |         char    real[XkbKeyNameLength]  _X_NONSTRING;
+      |                                         ^~~~~~~~~~~~
+/usr/include/X11/extensions/XKBstr.h:410:39: error: expected ‘;’ at end of member declaration
+  410 |         char    alias[XkbKeyNameLength] _X_NONSTRING;
+      |                                       ^
+      |                                        ;
+/usr/include/X11/extensions/XKBstr.h:410:41: error: ‘_X_NONSTRING’ does not name a type
+  410 |         char    alias[XkbKeyNameLength] _X_NONSTRING;
+      |                                         ^~~~~~~~~~~~
+[8443/8456] CXX obj/QtWebEngineCore/print_view_manager_qt.o
+ninja: build stopped: subcommand failed.
+FAILED: qtwebengine/src/core/Release/x86_64/QtWebEngineCore.stamp qtwebengine/src/core/Release/x86_64/obj/tools/v8_context_snapshot/v8_context_snapshot.stamp qtwebengine/src/core/Release/x86_64/QtWebEngineCore /home/m83/chulho/qt/6.9.1/source/qt-everywhere-src-6.9.1/build/qtwebengine/src/core/Release/x86_64/QtWebEngineCore.stamp /home/m83/chulho/qt/6.9.1/source/qt-everywhere-src-6.9.1/build/qtwebengine/src/core/Release/x86_64/obj/tools/v8_context_snapshot/v8_context_snapshot.stamp /home/m83/chulho/qt/6.9.1/source/qt-everywhere-src-6.9.1/build/qtwebengine/src/core/Release/x86_64/QtWebEngineCore
+cd /home/m83/chulho/qt/6.9.1/source/qt-everywhere-src-6.9.1/build/qtwebengine/src/core && /usr/bin/ninja -C /home/m83/chulho/qt/6.9.1/source/qt-everywhere-src-6.9.1/build/qtwebengine/src/core/Release/x86_64 QtWebEngineCore
+ninja: build stopped: subcommand failed.
+> [m83@chulho build]$
+

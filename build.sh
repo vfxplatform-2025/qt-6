@@ -33,7 +33,7 @@ cmake .. \
 /core/Linux/APPZ/packages/harfbuzz/8.4.0/lib64:\
 /core/Linux/APPZ/packages/libpng/1.6.43/lib:\
 /core/Linux/APPZ/packages/gstreamer/1.22.6/lib:\
-/core/Linux/APPZ/packages/ffmpeg/6.1.1/lib:\
+/core/Linux/APPZ/packages/ffmpeg/6.1.1/imath-3.2.0/lib:\
 /core/Linux/APPZ/packages/libxml2/2.11.7/lib:\
 /core/Linux/APPZ/packages/libxslt/1.1.39/lib:\
 /core/Linux/APPZ/packages/libre2/20240201/lib64:\
@@ -59,6 +59,7 @@ cmake .. \
   -DQT_FEATURE_system_harfbuzz=ON \
   -DQT_FEATURE_gstreamer=ON \
   -DQT_FEATURE_ffmpeg=ON \
+  -DFFMPEG_DIR="/core/Linux/APPZ/packages/ffmpeg/6.1.1/imath-3.2.0" \
   -DQT_FEATURE_vaapi=OFF \
   -DQT_FEATURE_opengl=ON \
   -DBUILD_qtwebengine=ON \
@@ -84,10 +85,6 @@ cmake --install .
 
 ninja -j$(nproc) -v > ninja.log 2>&1
 grep -i "failed\|undefined\|error\|fatal" ninja.log
-
-크라운 30만원 :
-
-휴대폰 
 
 
 

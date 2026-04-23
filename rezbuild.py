@@ -137,6 +137,8 @@ def build(source_path, build_path, install_path, targets):
     # 7) CMake 구성 (build.sh 최종 빌드 기준)
     openssl_root = deps.get("openssl", "")
 
+    ffmpeg_root = deps.get("ffmpeg", "")
+
     cmake_cmd = (
         f"cmake {qt_src} "
         f"-G Ninja "
@@ -154,6 +156,7 @@ def build(source_path, build_path, install_path, targets):
         f"-DQT_FEATURE_system_harfbuzz=ON "
         f"-DQT_FEATURE_gstreamer=ON "
         f"-DQT_FEATURE_ffmpeg=ON "
+        f"-DFFMPEG_DIR={ffmpeg_root} "
         f"-DQT_FEATURE_vaapi=OFF "
         f"-DQT_FEATURE_opengl=ON "
         f"-DBUILD_qtwebengine=ON "

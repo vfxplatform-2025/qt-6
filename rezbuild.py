@@ -138,6 +138,11 @@ def build(source_path, build_path, install_path, targets):
     openssl_root = deps.get("openssl", "")
 
     ffmpeg_root = deps.get("ffmpeg", "")
+    python_root = os.environ.get("REZ_PYTHON_ROOT", "")
+    python_exe = os.path.join(python_root, "bin", "python3") if python_root else ""
+    if not python_exe or not os.path.exists(python_exe):
+        python_exe = shutil.which("python3") or sys.executable
+    print(f"Python3 executable: {python_exe}")
 
     cmake_cmd = (
         f"cmake {qt_src} "
@@ -146,6 +151,7 @@ def build(source_path, build_path, install_path, targets):
         f"-DCMAKE_INSTALL_PREFIX={install_root} "
         f"-DCMAKE_BUILD_TYPE=Release "
         f'-DCMAKE_INSTALL_RPATH="{rpath_str}" '
+        f"-DPython3_EXECUTABLE={python_exe} "
         f"-DQT_BUILD_EXAMPLES=OFF "
         f"-DQT_BUILD_TESTS=OFF "
         f"-DQT_FEATURE_openssl=ON "
@@ -154,8 +160,8 @@ def build(source_path, build_path, install_path, targets):
         f"-DQT_FEATURE_system_zlib=ON "
         f"-DQT_FEATURE_system_png=ON "
         f"-DQT_FEATURE_system_harfbuzz=ON "
-        f"-DQT_FEATURE_gstreamer=ON "
-        f"-DQT_FEATURE_ffmpeg=ON "
+        f"-DINPUT_gstreamer=yes "
+        f"-DINPUT_ffmpeg=yes "
         f"-DFFMPEG_DIR={ffmpeg_root} "
         f"-DQT_FEATURE_vaapi=OFF "
         f"-DQT_FEATURE_opengl=ON "
